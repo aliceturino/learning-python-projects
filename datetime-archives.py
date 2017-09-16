@@ -9,22 +9,22 @@ import datetime
 extension = input("Type the extension that you want in the file (.txt by default):\n")
 filename =  datetime.datetime.now()
 
-def extension_check(): #checking if the variable extension has a "." at the start
+def extension_check(): # checking if the variable extension has a "." at the start
     global extension
     try:
         if extension[0] == ".":
             return "Ready to go!"
         else:
-            extension = ".txt" #defining default extension
+            extension = ".txt" # defining default extension
             return "Using default extension .txt"
-    except IndexError: # avoiding string index out of range and using the default extension instead
+    except IndexError: # avoiding "string index out of range" and using the default extension instead
         extension = ".txt"
         return "Blank input... Using default extension .txt"
 
-def create_file():
+def create_file(): # creating blank file
     #strftime.org/
     with open(filename.strftime("%Y-%m-%d-%H-%M")+ extension, "w") as file:
-        file.write("") #writing empty string
+        file.write("") # writing empty file
 
 extension_check()
 create_file()
