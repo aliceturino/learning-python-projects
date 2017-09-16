@@ -1,5 +1,5 @@
 """
-This script creates and empty file with date and time (2017-09-16-16-55) information.
+This script creates an empty file with date and time (2017-09-16-16-55) information.
 1 - Define the extension.
 2 - Creates the file based on time and date.
 github.com/aliceturino
